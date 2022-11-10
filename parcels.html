@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landano mockup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  </head>
+
+  <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* from navbar-top-fixed.css */
+      body {
+        min-height: 75rem;
+        padding-top: 4.5rem;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="static/assets/landano-logo.png" alt="Logo" height="30" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="parcels.html">Parcels
+              <span class="badge text-bg-success">112</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="requests.html">Requests
+              <span class="badge text-bg-danger">4</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">Settings
+              <i class="bi bi-gear-fill"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<main class="container">
+
+  <h1>Land parcels</h1>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="bg-light p-3 rounded">
+        <form>
+          <div class="mb-3">
+            <label for="country-select" class="form-label">Country</label>
+            <select class="form-select" aria-label="Select country">
+              <option value="Ghana" selected>Ghana</option>
+              <option value="Kenya">Kenya</option>
+              <option value="Mozambique">Mozambique</option>
+              <option value="Rwanda">Rwanda</option>
+              <option value="Tanzania">Tanzania</option>
+            </select>
+          </div>
+    
+          <div class="mb-3">
+            <label for="jurisdiction-select" class="form-label">Jurisdiction</label>
+            <select class="form-select" aria-label="Select jurisdiction">
+              <option value="Kumasi region" selected>Kumasi region</option>
+              <option value="Accra region">Accra region</option>
+            </select>
+          </div>
+    
+          <div class="mb-5">
+            <label for="locale-select" class="form-label">Locale</label>
+            <select class="form-select" aria-label="Select locale">
+              <option value="Hiawu Besease" selected>Hiawu Besease</option>
+              <option value="Adubiase">Adubiase</option>
+              <option value="Akrofuom">Akrofuom</option>
+              <option value="Nsuta">Nsuta</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <a class="btn btn-lg btn-success" href="parcel.html" role="button">Add parcel &raquo;</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <img class="img-fluid" src="static/assets/landano-leaflet-1.png">
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 pt-5">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="col-md-8 pt-5 text-end">
+      <button type="button" class="btn btn-secondary">Previous</button>
+      <button type="button" class="btn btn-secondary">1</button>
+      <button type="button" class="btn btn-dark">2</button>
+      <button type="button" class="btn btn-secondary">3</button>
+      <button type="button" class="btn btn-secondary">4</button>
+      <button type="button" class="btn btn-secondary">5</button>
+      <button type="button" class="btn btn-secondary">Next</button><br />
+      Showing 11 to 20 of 112 entries
+    </div>
+  </div>
+
+
+  <div class="table-responsive pt-5">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Identifier<i class="bi bi-caret-down-fill text-secondary"></i></th>
+          <th scope="col">Parcel name<i class="bi bi-caret-down-fill text-secondary"></i></th>
+          <th scope="col">Active rights<i class="bi bi-caret-down-fill text-secondary"></i></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1,001</td>
+          <td>random</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td>1,002</td>
+          <td>placeholder</td>
+          <td>irrelevant</td>
+        </tr>
+        <tr>
+          <td>1,003</td>
+          <td>data</td>
+          <td>rich</td>
+        </tr>
+        <tr>
+          <td>1,003</td>
+          <td>information</td>
+          <td>placeholder</td>
+        </tr>
+        <tr>
+          <td>1,004</td>
+          <td>text</td>
+          <td>random</td>
+        </tr>
+        <tr>
+          <td>1,005</td>
+          <td>dashboard</td>
+          <td>irrelevant</td>
+        </tr>
+        <tr>
+          <td>1,006</td>
+          <td>dashboard</td>
+          <td>illustrative</td>
+        </tr>
+        <tr>
+          <td>1,007</td>
+          <td>placeholder</td>
+          <td>tabular</td>
+        </tr>
+        <tr>
+          <td>1,008</td>
+          <td>random</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td>1,009</td>
+          <td>placeholder</td>
+          <td>irrelevant</td>
+        </tr>
+        <tr>
+          <td>1,010</td>
+          <td>data</td>
+          <td>rich</td>
+        </tr>
+        <tr>
+          <td>1,011</td>
+          <td>information</td>
+          <td>placeholder</td>
+        </tr>
+        <tr>
+          <td>1,012</td>
+          <td>text</td>
+          <td>placeholder</td>
+        </tr>
+        <tr>
+          <td>1,013</td>
+          <td>dashboard</td>
+          <td>irrelevant</td>
+        </tr>
+        <tr>
+          <td>1,014</td>
+          <td>dashboard</td>
+          <td>illustrative</td>
+        </tr>
+        <tr>
+          <td>1,015</td>
+          <td>random</td>
+          <td>tabular</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+      
+  </body>
+</html>
